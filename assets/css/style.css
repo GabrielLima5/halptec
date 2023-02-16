@@ -1,0 +1,755 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+.hide{
+    display: none !important;
+}
+
+.rotate{
+    transform: rotate(180deg);
+}
+
+.open{
+    right: 0 !important; 
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    font-family: 'Mukta', sans-serif;
+}
+
+header{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+header > .header-up{
+    font-size: 1.2em;
+    width: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header > .header-up > .image > img{
+    height: 120px;
+    margin-right: 120px;
+}
+ 
+header > .header-up > .icons{
+    display: flex;
+    align-items: center;
+    height: 120px;
+}
+
+header > .header-up > .icons > div{
+    height: 50px;
+    border-left: 1px solid gray;
+    padding-left: 20px;
+    margin: 0px 30px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+header > .header-up > .icons .desc .text-1 span{
+    font-weight: bold;
+}
+
+header > .header-up > .icons > .can-we-help button{
+    color: rgb(1, 153, 1);
+}
+
+header > .header-up button{
+    color: rgb(175, 11, 11);
+    border: none;
+    outline: none;
+    background: none;
+    margin-right: 10px;
+}
+
+header > .header-down{
+    width: 100%;
+    background-color: #9b0000;
+}
+.open-menu, .close-menu{
+    outline: none;
+    border: none;
+    background: none;
+    color: white;
+    display: none;
+}
+header > .header-down > .items > nav > ul{
+    height: 40px;
+    margin: 10px;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+header > .header-down > .items > nav > ul > li{
+    font-size: 1.5em;
+    height: inherit;
+}
+
+header > .header-down > .items > nav > ul > li:hover{
+    border-bottom: 3px solid white;
+}
+
+header > .header-down > .items > nav > ul > li:nth-child(6):hover{
+    border-bottom: unset;
+}
+header > .header-down > .items > nav > ul > li > a {
+    text-decoration: none;
+    color: white;
+}
+
+header > .header-down .budget-request{
+    border-radius: 15px;
+    font-size: 0.9em;
+    width: 250px;
+    height: 40px;
+    outline: none;
+    background: rgb(1, 153, 1);
+    border: 2px solid ;
+    color: white;
+}
+
+header > .header-down .budget-request > span{
+    margin-right: 15px;
+}
+
+header > .header-down .budget-request:hover{
+    cursor: pointer;
+    background-color: white;
+    color: rgb(1, 153, 1);
+}
+
+main > .about-us{
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+main > .about-us > .who-we-are{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main > .about-us > .who-we-are > h2{
+    color: #9b0000;
+    font-size: 3em;
+    margin: 20px;
+}
+
+main > .about-us > .who-we-are > .description{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1250px;
+}
+
+main > .about-us > .who-we-are > .description > p{
+    font-size: 1.5em;
+    text-align: justify;
+    margin-right: 50px;
+}
+
+main > .about-us > .who-we-are > .description > .image > img{
+    width: 450px;
+}
+
+main > .about-us > .stats{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+main > .about-us > .stats > div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main > .about-us > .stats > div > span {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #7e7b7b;
+}
+
+main > .about-us > .stats > div > .number{
+    font-size: 4em;
+}
+
+main > .products {
+    margin-top: 100px;
+    background-color: #9b0000;
+    color: white;
+}
+
+main > .products > h2{
+    text-align: center;
+    font-size: 3em;
+}
+
+main > .products > .products-list{
+    max-width: 1200px;
+    margin: auto; 
+}
+
+main > .products > .products-list > .product{
+    border-bottom: 1px solid white;
+}
+
+main > .products > .products-list span{
+    font-size: 2em;
+    text-align: left;
+}
+
+main > .products > .products-list button{
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    color: white;
+}
+
+main > .products > .products-list > .product-desc{
+    background-color: rgb(58, 0, 0);
+    display: flex;
+    flex-direction: column;
+}
+
+main > .products > .products-list > .product-desc > h2{
+    margin: 10px 0;
+}
+
+main > .products > .products-list > .product-desc > .item{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 1px solid white;
+    margin-top: 20px;
+}
+
+main > .products > .products-list > .product-desc > .item > .item-description{
+    width: 700px;
+    padding: 0px 32px;
+}
+
+main > .services{
+    max-width: 1200px;
+    margin: auto;
+}
+
+main > .services > h2{
+    color: #9b0000;
+    text-align: center;
+    font-size: 3em;
+}
+
+main > .services > .services-list{
+    font-size: 1.5em;
+}
+
+main > .services > .services-list li{
+    border-bottom: 1px solid #9b0000;
+    margin-bottom: 10px;
+}
+
+main > .contact{
+    padding: 50px 0px;
+    background-color: #9b0000;
+    color: white;
+}
+main > .contact > h2{
+    margin: 0;
+    font-size: 3em;
+    text-align: center;
+}
+main > .contact > .contact-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main > .contact > .contact-box > .contact-form{
+    max-width: 700px;
+    margin: 0px 30px;
+}
+
+main > .contact > .contact-box > .contact-form > span {
+    font-size: 1.7em;
+    font-weight: bold;
+}
+main > .contact > .contact-box > .contact-form > form{
+    display: flex;
+    flex-direction: column;
+}
+main > .contact > .contact-box > .contact-form > form > .inputs{
+    display: flex;
+}
+
+main > .contact > .contact-box > .contact-form > form > .inputs > .data-inputs{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+main > .contact > .contact-box > .contact-form > form > .inputs > .data-inputs > input{
+    width: 250px;
+    height: 50px;
+    margin-bottom: 5px;
+    margin-right: 10px;
+}
+
+main > .contact > .contact-box > .contact-form > form > .inputs > .message-input > textarea{
+    font-size: 1.2em;
+    font-family: 'Mukta', sans-serif;
+    width: 440px;
+    height: 160px;
+    resize: none;
+}
+
+main > .contact > .contact-box > .contact-form > form > button{
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background-color: #000000;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: center;
+    width: 150px;
+    height: 50px;
+    color: white;
+}
+
+
+main > .contact > .contact-box > .contact-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+main > .contact > .contact-box > .contact-info > span{
+    font-size: 1.7em;
+    font-weight: bold;
+    text-align: center;
+}
+
+main > .contact > .contact-box > .contact-info > address > ul{
+    list-style: none;
+    margin: 0;
+}
+
+main > .contact > .contact-box > .contact-info > address > ul > li{
+    font-style: normal;
+    font-size: 1.3em;
+    margin-bottom: 10px;
+}
+
+main > .contact > .contact-box > .contact-info > address > ul > li > button{
+    border: none;
+    outline: none;
+    background: none;
+    color: white;
+}
+
+main > .contact > .contact-box > .contact-info > address > ul > li > a, footer > span > a{
+    color: white;
+    text-decoration: none;
+}
+
+footer{
+    height: 100px;
+    background-color:black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer > span{
+    text-align: center;
+}
+
+/* Animação */
+[data-animation]{
+    opacity: 0;
+    transition: 1s;
+}
+
+[data-animation="down"]{
+    transform: translate3d(0, -100%, 0);
+}
+
+[data-animation="up"]{
+    transform: translate3d(0, 100%, 0);
+}
+
+[data-animation="right"]{
+    transform: translate3d(50px, 0, 0);
+}
+
+[data-animation="left"]{
+    transform: translate3d(-100%, 0, 0);
+}
+
+[data-animation].animate{
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+}
+
+@media only screen and (max-width: 1400px){
+    main > .about-us > .who-we-are > .description{
+        flex-direction: column;
+        width: 1000px;
+    }
+
+    main > .about-us > .who-we-are > .description > p{
+        width: 900px;
+        margin: 0 0 50px 0;
+    }
+}
+
+@media only screen and (max-width: 1300px){
+    header > .header-up > .icons > .can-we-help{
+        display: none;
+    }
+
+    header > .header-up > .image > img{
+        margin-right: 0;
+    }
+}
+
+@media only screen and (max-width: 1200px){
+    main > .products > .products-list{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    main > .products > .products-list > .product-desc, 
+    main > .products > .products-list > .product, 
+    main > .services{
+        width: 1000px;
+    }
+}
+
+@media only screen and (max-width: 1100px){
+    main > .about-us > .stats {
+        flex-direction: column;
+    }
+
+    main > .about-us > .stats > div{
+        flex-direction: row;
+    }
+
+    main > .about-us > .stats > div > span{
+        margin-right: 20px;
+    }
+
+    main > .products > .products-list > .product-desc > .item > .item-image > img{
+        width: 200px;
+        margin: 0px 50px;
+    }
+
+    main > .products > .products-list > .product-desc, 
+    main > .products > .products-list > .product, 
+    main > .services{
+        width: 800px;
+    }
+
+    main > .contact > .contact-box{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    main > .contact > .contact-box > .contact-form{
+        margin-bottom: 30px;
+    }
+}
+
+@media only screen and (max-width: 1000px){
+    header > .header-down > .items > nav > ul{
+        justify-content: space-between;
+    }
+
+    main > .about-us > .who-we-are > .description, 
+    main > .about-us > .who-we-are > .description > p{
+        width: 700px;
+    }
+
+    main > .about-us > .who-we-are > .description > p{
+        margin: 0 0 50px 0;
+    }
+}
+
+@media only screen and (max-width: 900px){
+    header > .header-up > .image > img{
+        height: 100px;
+    }
+
+    header > .header-up > .icons > .opening-hours{
+        display: none;
+    }
+
+    header > .header-down > .items > nav > ul{
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        right: -50vw;
+        width: 50vw;
+        height: 100vh;
+        background-color: #5b0202;
+        margin: 0;
+        transition: right 0.2s linear;
+        z-index: 1;
+    }
+
+    header > .header-down > .red-line{
+        height: 40px;
+        background-color: #9b0000;
+    }
+
+    header > .header-up > .icons > .open-menu{
+        width: 100%;
+        display: inline-block;
+        outline: none;
+        border: none;
+        background: none;
+        color: #9b0000;
+    }
+
+    header > .header-down > .items > nav > ul > .close-menu{
+        margin-top: 30px;
+        display: inline-block;
+        background: none;
+        outline: none;
+        border: none;
+        color: white;
+        align-self: flex-start;
+        margin-left: 20px;
+    }
+
+    header > .header-down > .items > nav > ul > li > a{
+        border-bottom: 1px solid white;
+    }
+
+    main > .products > .products-list > .product-desc, 
+    main > .products > .products-list > .product{
+        width: 500px;
+    }
+
+    main > .products > .products-list > .product-desc > .item{
+        flex-direction: column;
+    }
+
+    main > .products > .products-list > .product-desc > .item > .item-description{
+        width: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    main > .products > .products-list > .product-desc > .item > .item-description > p{
+        text-align: justify;
+    }
+
+    main > .services{
+        width: 700px;
+    }
+}
+
+@media only screen and (max-width: 800px){
+    main > .about-us > .who-we-are > .description, 
+    main > .about-us > .who-we-are > .description > p, 
+    main > .services, main > .contact > .contact-box > .contact-form > p{
+        width: 500px;
+    }
+
+    main > .contact > .contact-box > .contact-form{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    main > .contact > .contact-box > .contact-form > p{
+        text-align: justify;
+    }
+
+    main > .contact > .contact-box > .contact-form > form > .inputs {
+        flex-direction: column;
+    }
+
+    main > .contact > .contact-box > .contact-form > form > .inputs > .data-inputs > input{
+        width: 440px;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    [data-animation]{
+        opacity: 1;
+    }
+
+    [data-animation="down"]{
+        transform: translate3d(0, 0, 0);
+    }
+    
+    [data-animation="up"]{
+        transform: translate3d(0, 0, 0);
+    }
+    
+    [data-animation="right"]{
+        transform: translate3d(0, 0, 0);
+    }
+    
+    [data-animation="left"]{
+        transform: translate3d(0, 0, 0);
+    }
+    
+    [data-animation].animate{
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+    header > .header-up{
+        justify-content: space-around;
+    }
+
+    header > .header-up > .icons > .contact-data{
+        display: none;
+    }
+
+    header > .header-down .budget-request{
+        width: 156px;
+    }
+
+    main > .about-us > .who-we-are > .description > p{
+        text-align: left;
+    }
+
+    main > .about-us > .stats > div > .number {
+        font-size: 3em;
+    }
+
+    main > .about-us > .stats > div > span{
+        font-size: 1.5em;
+    }
+
+    main > .about-us > .who-we-are > .description, 
+    main > .about-us > .who-we-are > .description > p,
+    main > .about-us > .who-we-are > .description > .image > img,
+    main > .products > .products-list > .product-desc,
+    main > .products > .products-list > .product, 
+    main > .products > .products-list > .product-desc > .item > .item-description, 
+    main > .services, 
+    main > .contact > .contact-box > .contact-form > p, 
+    main > .contact > .contact-box > .contact-form > form > .inputs > .data-inputs > input,
+    main > .contact > .contact-box > .contact-form > form > .inputs > .message-input > textarea {
+        width: 400px;
+    }
+
+    main > .products > .products-list span{
+        font-size: 1.5em;
+    }
+}
+
+@media only screen and (max-width: 415px){
+    main > .about-us > .who-we-are > .description > p,
+    main > .about-us > .who-we-are > .description > .image > img, 
+    main > .about-us > .who-we-are > .description > p,
+    main > .about-us > .who-we-are > .description,
+    main > .products > .products-list > .product, 
+    main > .products > .products-list > .product-desc, 
+    main > .products > .products-list > .product-desc > .item > .item-description,
+    main > .services,
+    main > .contact > .contact-box > .contact-form > p, 
+    main > .contact > .contact-box > .contact-form > form > .inputs > .data-inputs > input,
+    main > .contact > .contact-box > .contact-form > form > .inputs > .message-input > textarea{
+        width: 300px;
+    }
+
+    main > .about-us > .who-we-are > h2{
+        font-size: 2.2em;
+    }
+
+    main > .contact > .contact-box > .contact-form > span{
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 315px){
+    main > .about-us > .who-we-are > .description > p,
+    main > .about-us > .who-we-are > .description > .image > img, 
+    main > .about-us > .who-we-are > .description > p,
+    main > .about-us > .who-we-are > .description,
+    main > .about-us > .stats,
+    main > .products > .products-list > .product, 
+    main > .products > .products-list > .product-desc, 
+    main > .products > .products-list > .product-desc > .item > .item-description,
+    main > .services,
+    main > .contact > .contact-box > .contact-form > p, 
+    main > .contact > .contact-box > .contact-form > form > .inputs > .data-inputs > input,
+    main > .contact > .contact-box > .contact-form > form > .inputs > .message-input > textarea{
+        width: 200px;
+    }
+
+    main > .about-us{
+        justify-content: center;
+        align-items: center;
+    }
+
+    main > .about-us > .stats > div > span.text{
+        width: 115px;
+        font-size: 1.5em;
+        text-align: center;
+        margin-right: 0;
+    }    
+
+    main > .about-us > .stats > div > span.number{
+        font-size: 2em;
+    }
+
+    main > .products > .products-list span{
+        font-size: 1.1em;
+    }
+
+    main > .products > .products-list > .product-desc > .item > .item-image > img{
+        width: 150px;
+    }
+
+    main > .products > .products-list > .product-desc > .item > .item-description > p{
+        text-align: left;
+    }
+    main > .contact > .contact-box > .contact-info > address > ul{
+        padding: 0;
+        max-width: 250px;
+        margin: auto;
+    }
+    main > .contact > .contact-box > .contact-info > address > ul > li{
+        font-size: 1em;
+        text-align: center;
+    }
+}
