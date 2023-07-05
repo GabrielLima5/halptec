@@ -1,4 +1,4 @@
-# halptec-landing-page
+# halptec
 Uma landing page estática e responsiva para a empresa HALPTEC Serviços Elétricos, desenvolvida utilizando HTML, CSS e JavaScript.
 
 Este projeto se baseia em uma empresa real. A <a href="http://www.halptec.com.br/">HALPTEC</a> é uma empresa de serviços elétricos da minha região, que gentilmente permitiu que eu usasse seus dados para desenvolver esta landing page, para treinar minhas habilidades com o desenvolvimento front-end.
