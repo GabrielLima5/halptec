@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 https://voltbr.com.br/ (header e contato)
 http://www.hvmeletrica.com.br/
 http://www.halptec.com.br/servicos-disjuntores-halptec.asp
+=======
+https://voltbr.com.br/ (header e contato)
+http://www.hvmeletrica.com.br/
+http://www.halptec.com.br/servicos-disjuntores-halptec.asp
+>>>>>>> 43fe7c6b1d98314d131a74916c7c4da6c5b5bd46
 https://jsantanainstalacoes.com.br/
