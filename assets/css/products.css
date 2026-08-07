@@ -1,0 +1,222 @@
+/* ==========================================================================
+   Products — catalog accordion, item cards with 3D tilt/shine
+   ========================================================================== */
+
+main > .products{
+    position: relative;
+    padding: clamp(70px, 10vh, 130px) clamp(18px, 4.5vw, 40px);
+}
+
+main > .products::before{
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent, rgba(255,51,85,.05), transparent);
+    pointer-events: none;
+}
+
+main > .products > h2{
+    text-align: center;
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    font-weight: 800;
+    max-width: 720px;
+    margin: 0 auto;
+}
+main > .products > .products-intro{
+    max-width: 640px;
+    margin: 14px auto 56px;
+    text-align: center;
+    color: var(--text-dim);
+    font-size: 1.02rem;
+}
+
+main > .products > .products-list{
+    max-width: 1120px;
+    margin: auto;
+    counter-reset: product-counter;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    position: relative;
+    z-index: 1;
+}
+
+main > .products > .products-list > .product{
+    counter-increment: product-counter;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 22px clamp(18px, 3vw, 30px);
+    border-radius: var(--r-lg);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    backdrop-filter: blur(14px);
+    cursor: pointer;
+    transition: border-color .35s, background .35s, transform .3s var(--ease-out);
+}
+main > .products > .products-list > .product::before{
+    content: counter(product-counter, decimal-leading-zero);
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--accent-2);
+    width: 44px; height: 44px;
+    border-radius: 12px;
+    flex-shrink: 0;
+    display: flex; align-items: center; justify-content: center;
+    background: var(--gradient-brand-soft);
+    border: 1px solid rgba(var(--accent-rgb), .25);
+}
+main > .products > .products-list > .product:hover{
+    border-color: rgba(var(--accent-rgb), .4);
+    background: var(--surface-hover);
+    transform: translateY(-2px);
+}
+
+main > .products > .products-list button{
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: var(--surface-strong);
+    color: var(--text);
+    width: 42px; height: 42px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: .85rem;
+    flex-shrink: 0;
+    margin-left: auto;
+    order: 3;
+}
+main > .products > .products-list button i{ transition: transform .4s var(--ease-out); }
+main > .products > .products-list button.rotate i{ transform: rotate(180deg); }
+
+main > .products > .products-list span{
+    font-size: clamp(1.05rem, 1.6vw, 1.3rem);
+    font-weight: 600;
+    text-align: left;
+    color: var(--text);
+    order: 2;
+}
+
+main > .products > .products-list > .product-desc{
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transition: max-height .7s var(--ease-out), opacity .5s ease;
+}
+main > .products > .products-list > .product-desc:not(.hide){
+    opacity: 1;
+    pointer-events: auto;
+}
+
+main > .products > .products-list > .product-desc > h2{
+    font-size: 1.3rem;
+    margin: 28px 4px 6px;
+    color: var(--accent-2);
+    font-weight: 700;
+}
+
+main > .products > .products-list > .product-desc > .item{
+    display: flex;
+    align-items: center;
+    gap: clamp(18px, 3vw, 36px);
+    margin: 16px 0;
+    padding: clamp(18px, 2.6vw, 28px);
+    border-radius: var(--r-lg);
+    background: rgba(255,255,255,.03);
+    border: 1px solid var(--border);
+    position: relative;
+    overflow: hidden;
+    transform-style: preserve-3d;
+    transition: transform .12s linear, border-color .35s, box-shadow .35s, background .35s;
+    will-change: transform;
+}
+main > .products > .products-list > .product-desc > .item::after{
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(420px circle at var(--mx, 50%) var(--my, 50%), rgba(255,255,255,.08), transparent 60%);
+    opacity: 0;
+    transition: opacity .35s;
+    pointer-events: none;
+}
+main > .products > .products-list > .product-desc > .item:hover{
+    border-color: rgba(var(--accent-rgb), .38);
+    background: rgba(255,255,255,.045);
+    box-shadow: 0 24px 60px -24px rgba(var(--accent-rgb), .5);
+}
+main > .products > .products-list > .product-desc > .item:hover::after{ opacity: 1; }
+
+main > .products > .products-list > .product-desc > .item > .item-image{
+    flex-shrink: 0;
+    width: clamp(130px, 16vw, 210px);
+    aspect-ratio: 1 / 1;
+    border-radius: var(--r-md);
+    background: linear-gradient(160deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px;
+    transform: translateZ(24px);
+}
+main > .products > .products-list > .product-desc > .item > .item-image > img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 10px 22px rgba(0,0,0,.5));
+}
+
+main > .products > .products-list > .product-desc > .item > .item-description{
+    flex: 1;
+    min-width: 0;
+    transform: translateZ(12px);
+}
+main > .products > .products-list > .product-desc > .item > .item-description > h3{
+    font-size: 1.12rem;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 8px;
+}
+main > .products > .products-list > .product-desc > .item > .item-description p{
+    color: var(--text-dim);
+    font-size: .96rem;
+    margin: 8px 0;
+}
+main > .products > .products-list > .product-desc > .item > .item-description b{
+    display: inline-block;
+    margin-top: 10px;
+    font-size: .74rem;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--accent-2);
+}
+main > .products > .products-list > .product-desc > .item > .item-description ul{
+    margin: 8px 0;
+    padding-left: 0;
+    list-style: none;
+}
+main > .products > .products-list > .product-desc > .item > .item-description li{
+    position: relative;
+    padding-left: 18px;
+    font-size: .92rem;
+    color: var(--text-dim);
+    margin-bottom: 6px;
+}
+main > .products > .products-list > .product-desc > .item > .item-description li::before{
+    content: '';
+    position: absolute;
+    left: 0; top: .6em;
+    width: 6px; height: 6px;
+    border-radius: 2px;
+    background: var(--gradient-brand);
+}
+main > .products > .products-list > .product-desc > .item > .item-description abbr{
+    color: var(--accent-2);
+    text-decoration: none;
+    border-bottom: 1px dotted rgba(var(--accent-rgb), .55);
+    cursor: help;
+}

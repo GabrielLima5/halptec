@@ -1,0 +1,115 @@
+/* ==========================================================================
+   About — "Quem somos?" section
+   ========================================================================== */
+
+main > .about-us{
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: clamp(70px, 10vh, 130px) clamp(18px, 4.5vw, 40px);
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+}
+
+main > .about-us > .who-we-are{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+main > .about-us > .who-we-are > h2{
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    font-weight: 800;
+    margin-bottom: 34px;
+}
+
+main > .about-us > .who-we-are > .description{
+    display: grid;
+    grid-template-columns: 1.3fr .7fr;
+    gap: 48px;
+    align-items: center;
+    width: 100%;
+    text-align: left;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--r-xl);
+    padding: clamp(24px, 4vw, 48px);
+    backdrop-filter: blur(14px);
+    box-shadow: var(--shadow-md);
+}
+
+main > .about-us > .who-we-are > .description > p{
+    font-size: 1.08rem;
+    line-height: 1.85;
+    color: var(--text-dim);
+    margin: 0;
+}
+main > .about-us > .who-we-are > .description > p strong{ color: var(--text); }
+main > .about-us > .who-we-are > .description > p abbr{
+    color: var(--accent-2);
+    text-decoration: none;
+    border-bottom: 1px dotted rgba(var(--accent-rgb), .6);
+}
+
+main > .about-us > .who-we-are > .description > .image{
+    position: relative;
+    border-radius: var(--r-lg);
+    overflow: hidden;
+    border: 1px solid var(--border-strong);
+    box-shadow: var(--shadow-md);
+    background: linear-gradient(160deg, rgba(255,51,85,.10), rgba(124,92,255,.06));
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+main > .about-us > .who-we-are > .description > .image > img{
+    width: 100%;
+    max-width: 340px;
+    border-radius: var(--r-md);
+}
+
+main > .about-us > .stats{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+main > .about-us > .stats > div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 34px 20px;
+    text-align: center;
+    border-radius: var(--r-lg);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    backdrop-filter: blur(14px);
+    transition: transform .4s var(--ease-out), border-color .4s, box-shadow .4s;
+}
+main > .about-us > .stats > div:hover{
+    transform: translateY(-6px);
+    border-color: rgba(var(--accent-rgb), .45);
+    box-shadow: 0 20px 50px -20px rgba(var(--accent-rgb), .5);
+}
+
+main > .about-us > .stats > div > .number{
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(2.4rem, 4vw, 3.4rem);
+    font-weight: 800;
+    background: var(--gradient-brand);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    line-height: 1;
+}
+main > .about-us > .stats > div > .text{
+    font-size: .95rem;
+    color: var(--text-faint);
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    font-weight: 600;
+}

@@ -1,0 +1,21 @@
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+footer{
+    padding: 26px 20px;
+    background: var(--bg-soft);
+    border-top: 1px solid var(--border);
+    color: var(--text-faint);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: .88rem;
+}
+footer > span{ text-align: center; }
+footer > span > a{
+    color: var(--accent-2);
+    text-decoration: none;
+    font-weight: 600;
+}
+footer > span > a:hover{ text-decoration: underline; }

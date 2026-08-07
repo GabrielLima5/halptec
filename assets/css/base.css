@@ -1,0 +1,174 @@
+/* ==========================================================================
+   Base — fonts, design tokens, resets, typography, global utilities
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&display=swap');
+
+:root{
+    /* palette */
+    --bg: #06070a;
+    --bg-soft: #0a0c12;
+    --surface: rgba(255,255,255,.045);
+    --surface-strong: rgba(255,255,255,.08);
+    --surface-hover: rgba(255,255,255,.11);
+    --border: rgba(255,255,255,.10);
+    --border-strong: rgba(255,255,255,.18);
+
+    --text: #f4f5f7;
+    --text-dim: #aab0bc;
+    --text-faint: #6c7280;
+
+    --accent: #ff3355;
+    --accent-2: #ff8a3d;
+    --accent-3: #7c5cff;
+    --accent-rgb: 255,51,85;
+    --whatsapp: #25d366;
+
+    --gradient-brand: linear-gradient(135deg, #ff3355 0%, #ff7a45 100%);
+    --gradient-brand-soft: linear-gradient(135deg, rgba(255,51,85,.18), rgba(255,122,69,.10));
+
+    --r-sm: 10px;
+    --r-md: 16px;
+    --r-lg: 22px;
+    --r-xl: 28px;
+
+    --shadow-lg: 0 30px 80px -20px rgba(0,0,0,.65);
+    --shadow-md: 0 18px 40px -16px rgba(0,0,0,.55);
+    --shadow-glow: 0 0 0 1px rgba(var(--accent-rgb),.18), 0 20px 60px -18px rgba(var(--accent-rgb),.45);
+
+    --ease-out: cubic-bezier(.16,1,.3,1);
+    --ease-soft: cubic-bezier(.22,.61,.36,1);
+
+    --header-h: 128px;
+    --header-h-scrolled: 78px;
+}
+
+*, *::before, *::after{ box-sizing: border-box; }
+
+::selection{ background: rgba(var(--accent-rgb), .35); color: #fff; }
+
+html{
+    scroll-behavior: smooth;
+    background: var(--bg);
+    /* html (not just body) is what actually owns touch panning on mobile.
+       Without this, the closed off-canvas menu (parked just past the
+       right edge) can still be revealed by a horizontal swipe, and the
+       page reads as wider than the viewport. */
+    overflow-x: hidden;
+    max-width: 100%;
+    touch-action: pan-y;
+}
+
+body{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    overflow-x: hidden;
+    max-width: 100%;
+    touch-action: pan-y;
+    position: relative;
+}
+
+h1, h2, h3, h4{
+    font-family: 'Space Grotesk', 'Inter', sans-serif;
+    letter-spacing: -0.02em;
+    margin: 0;
+    color: var(--text);
+}
+
+p{ color: var(--text-dim); }
+
+a{ color: inherit; }
+
+img{ max-width: 100%; display: block; }
+
+button{ font-family: inherit; }
+
+/* Custom scrollbar */
+::-webkit-scrollbar{ width: 10px; height: 10px; }
+::-webkit-scrollbar-track{ background: var(--bg); }
+::-webkit-scrollbar-thumb{ background: linear-gradient(var(--accent), var(--accent-2)); border-radius: 10px; border: 2px solid var(--bg); }
+html{ scrollbar-color: var(--accent) var(--bg); scrollbar-width: thin; }
+
+/* ==========================================================================
+   Utility / animation primitives
+   ========================================================================== */
+
+.hide{ display: none !important; }
+.rotate{ transform: rotate(180deg) !important; }
+.open{ right: 0 !important; }
+
+.eyebrow{
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: .78rem;
+    font-weight: 600;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    color: var(--accent-2);
+    padding: 6px 16px;
+    border-radius: 999px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    margin-bottom: 18px;
+}
+.eyebrow::before{
+    content: '';
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--gradient-brand);
+    box-shadow: 0 0 12px rgba(var(--accent-rgb), .9);
+}
+
+/* generic scroll-reveal (driven by JS adding .in-view / .animate) */
+[data-animation]{
+    opacity: 0;
+    transition: opacity 1s var(--ease-out), transform 1s var(--ease-out), filter 1s var(--ease-out);
+    will-change: transform, opacity;
+    filter: blur(6px);
+}
+[data-animation="left"]{ transform: translate3d(-60px, 0, 0); }
+[data-animation="right"]{ transform: translate3d(60px, 0, 0); }
+[data-animation="up"]{ transform: translate3d(0, 60px, 0); }
+[data-animation="down"]{ transform: translate3d(0, -40px, 0); }
+[data-animation].animate{
+    opacity: 1;
+    transform: translate3d(0,0,0);
+    filter: blur(0);
+}
+
+.reveal-up{
+    opacity: 0;
+    transform: translate3d(0, 36px, 0);
+    transition: opacity .8s var(--ease-out), transform .8s var(--ease-out);
+}
+.reveal-up.in-view{ opacity: 1; transform: translate3d(0,0,0); }
+
+/* stagger helper: children get incremental delay via inline --i set by JS */
+.stagger > *{
+    transition-delay: calc(var(--i, 0) * 70ms);
+}
+
+main{ position: relative; z-index: 1; }
+
+/* ==========================================================================
+   Reduced motion
+   ========================================================================== */
+
+@media (prefers-reduced-motion: reduce){
+    *, *::before, *::after{
+        animation-duration: .001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .001ms !important;
+        scroll-behavior: auto !important;
+    }
+    [data-animation]{ opacity: 1; transform: none; filter: none; }
+    .reveal-up{ opacity: 1; transform: none; }
+}

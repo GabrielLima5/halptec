@@ -1,0 +1,85 @@
+/* ==========================================================================
+   Responsive overrides — loaded last so breakpoints win the cascade
+   ========================================================================== */
+
+@media (max-width: 1080px){
+    .hero-inner{ grid-template-columns: 1fr; }
+    .hero-visual{ height: clamp(300px, 60vw, 420px); order: -1; }
+    main > .about-us > .who-we-are > .description{ grid-template-columns: 1fr; }
+    main > .about-us > .who-we-are > .description > .image{ order: -1; max-width: 320px; margin: 0 auto; }
+    main > .contact > .contact-box{ grid-template-columns: 1fr; }
+}
+
+@media (max-width: 900px){
+    header > .header-up > .icons > .opening-hours{ display: none; }
+    header > .header-up > .icons > div{ border-left: none; padding-left: 0; }
+
+    header > .header-down > .items > nav > ul{
+        position: fixed;
+        top: 0;
+        right: -85vw;
+        width: 85vw;
+        max-width: 380px;
+        height: 100vh;
+        margin: 0;
+        padding: 90px 30px 30px;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 26px;
+        background: rgba(8,9,13,.92);
+        backdrop-filter: blur(24px);
+        border-left: 1px solid var(--border-strong);
+        transition: right .45s var(--ease-out);
+        z-index: 300;
+    }
+    header > .header-down > .items > nav > ul.open{ right: 0 !important; }
+    header > .header-down > .items > nav > ul > li{ width: 100%; font-size: 1.2rem; }
+    header > .header-down > .items > nav > ul > li > a::after{ display: none; }
+    header > .header-down > .items > nav > ul > li:last-child{ margin-top: 10px; }
+
+    .open-menu{ display: inline-flex; align-items:center; justify-content:center; width:44px; height:44px; border-radius: 12px; background: var(--surface); border: 1px solid var(--border); }
+    .close-menu{ display: inline-flex; align-items:center; justify-content:center; width:40px; height:40px; border-radius: 10px; background: var(--surface); border: 1px solid var(--border); position:absolute; top: 24px; right: 24px; }
+
+    main > .products > .products-list > .product-desc > .item{ flex-direction: column; text-align: center; }
+    main > .products > .products-list > .product-desc > .item > .item-image{ width: 60%; max-width: 220px; }
+    main > .products > .products-list > .product-desc > .item > .item-description ul,
+    main > .products > .products-list > .product-desc > .item > .item-description p{ text-align: left; }
+}
+
+@media (max-width: 700px){
+    main > .contact > .contact-box > .contact-form > form > .inputs > .data-inputs{ grid-template-columns: 1fr; }
+    main > .about-us > .stats{ grid-template-columns: 1fr; }
+    header > .header-up > .icons > .contact-data{ display: none; }
+}
+
+@media (max-width: 560px){
+    header > .header-up > .icons > .can-we-help{ display: none; }
+}
+
+@media (max-width: 640px){
+    .hero{ min-height: 0; padding-top: 40px; }
+    .hero-visual{
+        position: static;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        margin-bottom: 8px;
+    }
+    .hero-card{
+        position: static !important;
+        width: 100% !important;
+        transform: none !important;
+        animation: none !important;
+    }
+}
+
+@media (max-width: 520px){
+    header > .header-up > .image > img{ height: 46px; }
+    .hero-cta{ flex-direction: column; align-items: stretch; }
+    .hero-cta .btn{ width: 100%; }
+    main > .products > .products-list > .product{ flex-wrap: wrap; }
+    main > .products > .products-list span{ order: 1; width: calc(100% - 64px); }
+    main > .products > .products-list button{ order: 3; margin-left: auto; }
+}

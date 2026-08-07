@@ -1,0 +1,44 @@
+/* ==========================================================================
+   Buttons — shared premium styles for generic action buttons
+   (used by hero CTAs and other in-page calls to action)
+   ========================================================================== */
+
+@keyframes gradientShift{
+    0%,100%{ background-position: 0% 50%; }
+    50%{ background-position: 100% 50%; }
+}
+
+.btn{
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 15px 32px;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 1rem;
+    border: 1px solid transparent;
+    cursor: pointer;
+    text-decoration: none;
+    transition: transform .35s var(--ease-out), box-shadow .35s, border-color .35s, background .35s, color .35s;
+}
+.btn-primary{
+    color: #fff;
+    background: var(--gradient-brand);
+    background-size: 200% 200%;
+    animation: gradientShift 7s ease infinite;
+    box-shadow: 0 16px 40px -14px rgba(var(--accent-rgb), .8);
+}
+.btn-primary:hover{ transform: translateY(-3px); box-shadow: 0 22px 50px -12px rgba(var(--accent-rgb), .9); }
+.btn-primary:active{ transform: translateY(-1px) scale(.98); }
+
+.btn-ghost{
+    color: var(--text);
+    background: var(--surface);
+    border-color: var(--border-strong);
+    backdrop-filter: blur(10px);
+}
+.btn-ghost:hover{ background: var(--surface-hover); border-color: rgba(255,255,255,.35); transform: translateY(-3px); }

@@ -4,15 +4,49 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HALPTEC Serviços Elétricos</title>
+    <title>HALPTEC Serviços Elétricos | Alta, Média e Baixa Tensão</title>
+    <meta name="description" content="HALPTEC — engenharia, comercialização e manutenção de equipamentos elétricos de baixa, média e alta tensão desde 2004. Cabines primárias, disjuntores, relés de proteção e serviços especializados.">
+    <meta name="theme-color" content="#06070a">
     <link rel="shortcut icon" href="assets/images/logo h.png">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/background.css">
+    <link rel="stylesheet" href="assets/css/chrome.css">
+    <link rel="stylesheet" href="assets/css/buttons.css">
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/hero.css">
+    <link rel="stylesheet" href="assets/css/about.css">
+    <link rel="stylesheet" href="assets/css/products.css">
+    <link rel="stylesheet" href="assets/css/services.css">
+    <link rel="stylesheet" href="assets/css/contact.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
 </head>
 <body>
+    <div class="preloader" aria-hidden="true">
+        <div class="bolt"></div>
+        <span class="label">HALPTEC</span>
+    </div>
+
+    <div class="bg-layer" aria-hidden="true">
+        <span class="aurora a1"></span>
+        <span class="aurora a2"></span>
+        <span class="aurora a3"></span>
+        <div class="grid-fade"></div>
+        <div class="noise"></div>
+    </div>
+
+    <div class="scroll-progress" aria-hidden="true"><div class="scroll-progress-bar"></div></div>
+    <div class="cursor-dot" aria-hidden="true"></div>
+    <div class="cursor-outline" aria-hidden="true"></div>
+
+    <button class="back-to-top" type="button" aria-label="Voltar ao topo">↑</button>
+
     <header id="header">
         <div class="header-up">
             <div class="image">
-                <img src="assets/images/logo.jpg" alt="Logo HALPTEC">
+                <img loading="eager" fetchpriority="high" decoding="async" src="assets/images/logo.png" alt="Logo HALPTEC">
             </div>
 
             <div class="icons">
@@ -70,7 +104,7 @@
                 <nav>
                     <ul class="menu">
                         <button class="close-menu"><i class="fas fa-times fa-2x"></i></button>
-                        <li><a href="#header">Home</a></li>
+                        <li><a href="#hero">Home</a></li>
                         <li><a href="#about-us">Quem Somos</a></li>
                         <li><a href="#products">Produtos</a></li>
                         <li><a href="#services">Serviços</a></li>
@@ -92,14 +126,72 @@
     </header>
 
     <main>
+        <section class="hero" id="hero">
+            <canvas class="hero-canvas" aria-hidden="true"></canvas>
+            <div class="hero-glow" aria-hidden="true"></div>
+
+            <div class="hero-inner">
+                <div class="hero-copy">
+                    <span class="eyebrow">Alta &middot; Média &middot; Baixa Tensão desde 2004</span>
+                    <h1 class="hero-title">Energia <span class="accent-text">sob controle</span>, do projeto à manutenção.</h1>
+                    <p class="lead">A HALPTEC projeta, instala e mantém equipamentos elétricos de baixa, média e alta tensão com segurança, agilidade e o rigor técnico que sua operação exige.</p>
+
+                    <div class="hero-cta">
+                        <a target="_blank" href="https://api.whatsapp.com/send/?phone=5511987829444&text&type=phone_number&app_absent=0" class="btn btn-primary">
+                            <i class="fa-brands fa-whatsapp"></i>
+                            <span>Falar com um especialista</span>
+                        </a>
+                        <a href="#products" class="btn btn-ghost">
+                            <span>Ver produtos</span>
+                        </a>
+                    </div>
+
+                    <div class="hero-stats">
+                        <div class="stat"><strong>19</strong><span>Anos no mercado</span></div>
+                        <div class="stat"><strong>150+</strong><span>Clientes atendidos</span></div>
+                        <div class="stat"><strong>112+</strong><span>Projetos executados</span></div>
+                    </div>
+                </div>
+
+                <div class="hero-visual" aria-hidden="true">
+                    <div class="hero-card card-1">
+                        <span class="tag">Média Tensão</span>
+                        <span class="val">Cabines &amp; QGBT</span>
+                        <span class="sub">Montagem completa</span>
+                    </div>
+                    <div class="hero-card card-core">
+                        <span class="tag">HALPTEC</span>
+                        <span class="val">Engenharia elétrica de ponta a ponta</span>
+                        <span class="sub">Instalação · Comercialização · Manutenção</span>
+                    </div>
+                    <div class="hero-card card-2">
+                        <span class="tag">Proteção</span>
+                        <span class="val">Relés Sepam / MiCOM</span>
+                        <span class="sub">Parametrização certificada</span>
+                    </div>
+                    <div class="hero-card card-3">
+                        <span class="tag">Suporte</span>
+                        <span class="val">09:00 – 17:00</span>
+                        <span class="sub">Seg. a sexta-feira</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-scroll-cue">
+                <span class="mouse"></span>
+                <span>Role para explorar</span>
+            </div>
+        </section>
+
         <section class="about-us" id="about-us">
             <div class="who-we-are">
+                <span class="eyebrow" data-animation="up">Sobre a HALPTEC</span>
                 <h2>Quem somos?</h2>
                 <div class="description">
                     <p data-animation="left">A <strong><abbr>HALPTEC</abbr></strong> é uma empresa especializada na instalação, comercialização e manutenção de equipamentos elétricos de baixa, média e alta tensão. Presentes no mercado desde 2004, nossa missão é oferecer produtos e serviços de qualidade, dentro dos princípios éticos, buscando a excelência, com a finalidade de satisfazer as expectativas de nossos clientes e oferecer soluções com segurança. Nossos profissionais são altamente especializados e capacitados para oferecer aos nossos clientes rapidez, segurança e garantia dos nossos produtos e serviços.</p>
                     
                     <div class="image">
-                        <img src="assets/images/logo.jpg" alt="Logo HALPTEC" data-animation="right">
+                        <img loading="lazy" decoding="async" src="assets/images/logo.png" alt="Logo HALPTEC" data-animation="right">
                     </div>
                 </div>
             </div>
@@ -123,8 +215,12 @@
         </section>
 
         <section class="products" id="products">
+            <div style="text-align:center" data-animation="up">
+                <span class="eyebrow">Catálogo técnico</span>
+            </div>
             <h2>Produtos</h2>
-            <div class="products-list" data-animation="left">
+            <p class="products-intro" data-animation="up">Equipamentos e componentes de fabricantes de referência, prontos para especificação em projetos de baixa, média e alta tensão. Clique em uma categoria para explorar.</p>
+            <div class="products-list">
                 <div class="product">
                     <button class="btn-1"><i class="fa-solid fa-chevron-down fa-2x"></i></button>
                     <span>Chave Seccionadora / Acessórios</span>
@@ -134,7 +230,7 @@
                     <h2>Chave Seccionadora e Acessórios</h2>
                     <div class="item">
                         <div class="item-image">
-                            <img src="assets/images/Chave Seccionadora e Acessórios/interruptores seccionadores.png" alt="Interruptores-Seccionadores">
+                            <img loading="lazy" decoding="async" src="assets/images/Chave Seccionadora e Acessórios/interruptores seccionadores.png" alt="Interruptores-Seccionadores">
                         </div>
 
                         <div class="item-description">
@@ -168,7 +264,7 @@
 
                     <div class="item">
                         <div class="item-image">
-                            <img src="assets/images/Chave Seccionadora e Acessórios/chave seccionadora.png" alt="Chave Seccionadora">
+                            <img loading="lazy" decoding="async" src="assets/images/Chave Seccionadora e Acessórios/chave seccionadora.png" alt="Chave Seccionadora">
                         </div>
 
                         <div class="item-description">
@@ -179,7 +275,7 @@
 
                     <div class="item">
                         <div class="item-image">
-                            <img src="assets/images/Chave Seccionadora e Acessórios/seccionadora RGAF Beghim Média Tensão.png" alt="Seccionadora RGAF Beghim Média Tensão">
+                            <img loading="lazy" decoding="async" src="assets/images/Chave Seccionadora e Acessórios/seccionadora RGAF Beghim Média Tensão.png" alt="Seccionadora RGAF Beghim Média Tensão">
                         </div>
                         <div class="item-description">
                             <h3>Seccionadora <abbr>RGAF</abbr> Beghim Média Tensão</h3>
@@ -189,7 +285,7 @@
                     
                     <div class="item">
                         <div class="item-image">
-                            <img src="assets/images/Chave Seccionadora e Acessórios/chave seccionadora beghim.png" alt="Chave Seccionadora Beghim">
+                            <img loading="lazy" decoding="async" src="assets/images/Chave Seccionadora e Acessórios/chave seccionadora beghim.png" alt="Chave Seccionadora Beghim">
                         </div>
                         <div class="item-description">
                             <h3>Chave Seccionadora Beghim</h3>
@@ -199,7 +295,7 @@
                     
                     <div class="item">
                         <div class="item-image">
-                            <img src="assets/images/Chave Seccionadora e Acessórios/seccionadora de média tensão Beghim.png" alt="Seccionadora de Média Tensão Beghim">
+                            <img loading="lazy" decoding="async" src="assets/images/Chave Seccionadora e Acessórios/seccionadora de média tensão Beghim.png" alt="Seccionadora de Média Tensão Beghim">
                         </div>
                         <div class="item-description">
                             <h3>Seccionadora de Média Tensão Beghim</h3>
@@ -209,7 +305,7 @@
                     
                     <div class="item">
                         <div class="item-image">
-                            <img src="assets/images/Chave Seccionadora e Acessórios/seccionadora tripolar alta tensão.png" alt="Seccionadora Tripolar Alta Tensão">
+                            <img loading="lazy" decoding="async" src="assets/images/Chave Seccionadora e Acessórios/seccionadora tripolar alta tensão.png" alt="Seccionadora Tripolar Alta Tensão">
                         </div>
                         <div class="item-description">
                             <h3>Seccionadora Tripolar Alta Tensão</h3>
@@ -219,7 +315,7 @@
                     
                     <div class="item">
                         <div class="item-image">
-                            <img src="assets/images/Chave Seccionadora e Acessórios/relé sepam série 10.png" alt="Relé Sepam Série 10">
+                            <img loading="lazy" decoding="async" src="assets/images/Chave Seccionadora e Acessórios/relé sepam série 10.png" alt="Relé Sepam Série 10">
                         </div>
                         <div class="item-description">
                             <h3>Relé Sepam Série 10</h3>
@@ -248,7 +344,7 @@
 
                     <div class="item">
                         <div class="item-image">
-                            <img src="assets/images/Chave Seccionadora e Acessórios/relé sepam série 20.png" alt="Relé Sepam Série 20">
+                            <img loading="lazy" decoding="async" src="assets/images/Chave Seccionadora e Acessórios/relé sepam série 20.png" alt="Relé Sepam Série 20">
                         </div>
                         <div class="item-description">
                             <h3>Relé Sepam Série 20</h3>
@@ -287,7 +383,7 @@
 
                     <div class="item">
                         <div class="item-image">
-                            <img src="assets/images/Chave Seccionadora e Acessórios/relé sepam série 40.png" alt="Relé Sepam Série 40">
+                            <img loading="lazy" decoding="async" src="assets/images/Chave Seccionadora e Acessórios/relé sepam série 40.png" alt="Relé Sepam Série 40">
                         </div>
 
                         <div class="item-description">
@@ -326,7 +422,7 @@
 
                     <div class="item">
                         <div class="item-image">
-                            <img src="assets/images/Chave Seccionadora e Acessórios/relé sepam série 80.png" alt="Relé Sepam Série 80">
+                            <img loading="lazy" decoding="async" src="assets/images/Chave Seccionadora e Acessórios/relé sepam série 80.png" alt="Relé Sepam Série 80">
                         </div>
 
                         <div class="item-description">
@@ -369,7 +465,7 @@
 
                     <div class="item">
                         <div class="item-image">
-                            <img src="assets/images/Chave Seccionadora e Acessórios/relé micom p9 xx.png" alt="Relé Micom P9 XX">
+                            <img loading="lazy" decoding="async" src="assets/images/Chave Seccionadora e Acessórios/relé micom p9 xx.png" alt="Relé Micom P9 XX">
                         </div>
 
                         <div class="item-description">
@@ -394,7 +490,7 @@
 
                     <div class="item">
                         <div class="item-image">
-                            <img src="assets/images/Chave Seccionadora e Acessórios/relé micom P12X.png" alt="Relé Micom P12X">
+                            <img loading="lazy" decoding="async" src="assets/images/Chave Seccionadora e Acessórios/relé micom P12X.png" alt="Relé Micom P12X">
                         </div>
 
                         <div class="item-description">
@@ -431,7 +527,7 @@
 
                     <div class="item">
                         <div class="item-image">
-                            <img src="assets/images/Chave Seccionadora e Acessórios/relé micom P22X.png" alt="Relé Micom P22X">
+                            <img loading="lazy" decoding="async" src="assets/images/Chave Seccionadora e Acessórios/relé micom P22X.png" alt="Relé Micom P22X">
                         </div>
 
                         <div class="item-description">
@@ -452,7 +548,7 @@
 
                     <div class="item">
                         <div class="item-image">
-                            <img src="assets/images/Chave Seccionadora e Acessórios/relé micom P72X.png" alt="Relé Micom P72X">
+                            <img loading="lazy" decoding="async" src="assets/images/Chave Seccionadora e Acessórios/relé micom P72X.png" alt="Relé Micom P72X">
                         </div>
 
                         <div class="item-description">
@@ -466,7 +562,7 @@
 
                     <div class="item">
                         <div class="item-image">
-                            <img src="assets/images/Chave Seccionadora e Acessórios/Relé Micom P521.png" alt="Relé Micom P521">
+                            <img loading="lazy" decoding="async" src="assets/images/Chave Seccionadora e Acessórios/Relé Micom P521.png" alt="Relé Micom P521">
                         </div>
 
                         <div class="item-description">
@@ -490,7 +586,7 @@
 
                     <div class="item">
                         <div class="item-image">
-                            <img src="assets/images/Chave Seccionadora e Acessórios/Relés Magnético Beghim.png" alt="Relés Magnéticos Beghim">
+                            <img loading="lazy" decoding="async" src="assets/images/Chave Seccionadora e Acessórios/Relés Magnético Beghim.png" alt="Relés Magnéticos Beghim">
                         </div>
                         <div class="item-description">
                             <h3>Relés Magnéticos Beghim</h3>
@@ -499,7 +595,7 @@
 
                     <div class="item">
                         <div class="item-image">
-                            <img src="assets/images/Chave Seccionadora e Acessórios/Acessórios para seccionadores Beghim.png" alt="Acessórios para Seccionadores Beghim">
+                            <img loading="lazy" decoding="async" src="assets/images/Chave Seccionadora e Acessórios/Acessórios para seccionadores Beghim.png" alt="Acessórios para Seccionadores Beghim">
                         </div>
 
                         <div class="item-description">
@@ -509,7 +605,7 @@
 
                     <div class="item">
                         <div class="item-image">
-                            <img src="assets/images/Chave Seccionadora e Acessórios/terminações e muflas para-raios.png" alt="Terminações e Muflas, Para-raios">
+                            <img loading="lazy" decoding="async" src="assets/images/Chave Seccionadora e Acessórios/terminações e muflas para-raios.png" alt="Terminações e Muflas, Para-raios">
                         </div>
 
                         <div class="item-description">
@@ -519,7 +615,7 @@
 
                     <div class="item">
                         <div class="item-image">
-                            <img src="assets/images/Chave Seccionadora e Acessórios/fusíveis HH NH.png" alt="Fusíveis HH NH">
+                            <img loading="lazy" decoding="async" src="assets/images/Chave Seccionadora e Acessórios/fusíveis HH NH.png" alt="Fusíveis HH NH">
                         </div>
                         <div class="item-description">
                             <h3>Fusíveis HH NH</h3>
@@ -528,7 +624,7 @@
 
                     <div class="item">
                         <div class="item-image">
-                            <img src="assets/images/Chave Seccionadora e Acessórios/motor para disjuntor alstom areva ge.png" alt="Motor para disjuntor Alstom/Areva/GE">
+                            <img loading="lazy" decoding="async" src="assets/images/Chave Seccionadora e Acessórios/motor para disjuntor alstom areva ge.png" alt="Motor para disjuntor Alstom/Areva/GE">
                         </div>
                         <div class="item-description">
                             <h3>Motor para disjuntor Alstom/Areva/GE</h3>
@@ -538,7 +634,7 @@
 
                     <div class="item">
                         <div class="item-image">
-                            <img src="assets/images/Chave Seccionadora e Acessórios/kit de vedação para disjuntor.png" alt="Kit de vedação para disjuntor Alstom/Areva/GE">
+                            <img loading="lazy" decoding="async" src="assets/images/Chave Seccionadora e Acessórios/kit de vedação para disjuntor.png" alt="Kit de vedação para disjuntor Alstom/Areva/GE">
                         </div>
 
                         <div class="item-description">
@@ -555,7 +651,7 @@
                     <h2>Cabines Primárias Compactas Schneider</h2>
                     <div class="item">
                         <div class="item-image">
-                            <img src="assets/images/Cabines Primárias Compactas Schneider/Painel de proteção com relé.png" alt="Painel de Proteção com Relé">
+                            <img loading="lazy" decoding="async" src="assets/images/Cabines Primárias Compactas Schneider/Painel de proteção com relé.png" alt="Painel de Proteção com Relé">
                         </div>
                         <div class="item-description">
                             <h3>Painel de proteção com relé</h3>
@@ -565,7 +661,7 @@
 
                     <div class="item">
                         <div class="item-image">
-                            <img src="assets/images/Cabines Primárias Compactas Schneider/Painel de comando 1.png" alt="Painel de Comando 1">
+                            <img loading="lazy" decoding="async" src="assets/images/Cabines Primárias Compactas Schneider/Painel de comando 1.png" alt="Painel de Comando 1">
                         </div>
                         <div class="item-description">
                             <h3>Painel de comando</h3>
@@ -575,7 +671,7 @@
 
                     <div class="item">
                         <div class="item-image">
-                            <img src="assets/images/Cabines Primárias Compactas Schneider/Painel de Média Tensão 1.png" alt="Painel de Média Tensão 1">
+                            <img loading="lazy" decoding="async" src="assets/images/Cabines Primárias Compactas Schneider/Painel de Média Tensão 1.png" alt="Painel de Média Tensão 1">
                         </div>
                         <div class="item-description">
                             <h3>Painel de Média Tensão</h3>
@@ -585,7 +681,7 @@
 
                     <div class="item">
                         <div class="item-image">
-                            <img src="assets/images/Cabines Primárias Compactas Schneider/Painel de Média Tensão 2.png" alt="Painel de Média Tensão 2">
+                            <img loading="lazy" decoding="async" src="assets/images/Cabines Primárias Compactas Schneider/Painel de Média Tensão 2.png" alt="Painel de Média Tensão 2">
                         </div>
                         <div class="item-description">
                             <h3>Painel de Média Tensão</h3>
@@ -595,7 +691,7 @@
 
                     <div class="item">
                         <div class="item-image">
-                            <img src="assets/images/Cabines Primárias Compactas Schneider/Painéis QGBT.png" alt="Painéis QGBT">
+                            <img loading="lazy" decoding="async" src="assets/images/Cabines Primárias Compactas Schneider/Painéis QGBT.png" alt="Painéis QGBT">
                         </div>
                         <div class="item-description">
                             <h3>Painéis <abbr>QGBT</abbr></h3>
@@ -605,7 +701,7 @@
 
                     <div class="item">
                         <div class="item-image">
-                            <img src="assets/images/Cabines Primárias Compactas Schneider/Painel de baixa tensão.png" alt="Painel de baixa tensão">
+                            <img loading="lazy" decoding="async" src="assets/images/Cabines Primárias Compactas Schneider/Painel de baixa tensão.png" alt="Painel de baixa tensão">
                         </div>
                         <div class="item-description">
                             <h3>Painel de Baixa Tensão</h3>
@@ -615,7 +711,7 @@
 
                     <div class="item">
                         <div class="item-image">
-                            <img src="assets/images/Cabines Primárias Compactas Schneider/Painel de comando 2.png" alt="Painel de Comando 2">
+                            <img loading="lazy" decoding="async" src="assets/images/Cabines Primárias Compactas Schneider/Painel de comando 2.png" alt="Painel de Comando 2">
                         </div>
                         <div class="item-description">
                             <h3>Painel de Comando</h3>
@@ -625,7 +721,7 @@
 
                     <div class="item">
                         <div class="item-image">
-                            <img src="assets/images/Cabines Primárias Compactas Schneider/Painel de média tensão 3.png" alt="Painel de Média Tensão">
+                            <img loading="lazy" decoding="async" src="assets/images/Cabines Primárias Compactas Schneider/Painel de média tensão 3.png" alt="Painel de Média Tensão">
                         </div>
                         <div class="item-description">
                             <h3>Painel de Média Tensão</h3>
@@ -635,7 +731,7 @@
 
                     <div class="item">
                         <div class="item-image">
-                            <img src="assets/images/Cabines Primárias Compactas Schneider/Cabine primária em alvenaria.png" alt="Cabine Primária em Alvenaria">
+                            <img loading="lazy" decoding="async" src="assets/images/Cabines Primárias Compactas Schneider/Cabine primária em alvenaria.png" alt="Cabine Primária em Alvenaria">
                         </div>
                         <div class="item-description">
                             <h3>Cabine Primária em Alvenaria (apenas disjuntores e acessórios)</h3>
@@ -645,7 +741,7 @@
 
                     <div class="item">
                         <div class="item-image">
-                            <img src="assets/images/Cabines Primárias Compactas Schneider/Cabine primária blindada.png" alt="Cabine Primári Blindada">
+                            <img loading="lazy" decoding="async" src="assets/images/Cabines Primárias Compactas Schneider/Cabine primária blindada.png" alt="Cabine Primári Blindada">
                         </div>
                         <div class="item-description">
                             <h3>Cabine Primária Blindada</h3>
@@ -661,7 +757,7 @@
                     <h2>Disjuntores Schneider Electric Média Tensão</h2>
                     <div class="item">
                         <div class="item-image">
-                            <img src="assets/images/Disjuntores Schneider Electric MT/disjuntores schneider electric evolls EASYPACT MT.png" alt="
+                            <img loading="lazy" decoding="async" src="assets/images/Disjuntores Schneider Electric MT/disjuntores schneider electric evolls EASYPACT MT.png" alt="
                             Disjuntores Schneider Electric - Evolis/EASYPACT MT a vácuo para tensões até 24kV">
                         </div>
                         <div class="item-description">
@@ -700,7 +796,7 @@
 
                     <div class="item">
                         <div class="item-image">
-                            <img src="assets/images/Disjuntores Schneider Electric MT/disjuntor evolis easypact carrinho.png" alt="Disjuntor Evolis/Easypact c/ Carrinho">
+                            <img loading="lazy" decoding="async" src="assets/images/Disjuntores Schneider Electric MT/disjuntor evolis easypact carrinho.png" alt="Disjuntor Evolis/Easypact c/ Carrinho">
                         </div>
                         <div class="item-description">
                             <h3>Disjuntor Evolis/Easypact c/ Carrinho</h3>
@@ -732,7 +828,7 @@
 
                     <div class="item">
                         <div class="item-image">
-                            <img src="assets/images/Disjuntores Schneider Electric MT/disjuntor evokit easypact schneider electric.png" alt="Disjuntor Evokit/Easypact Schneider Electric">
+                            <img loading="lazy" decoding="async" src="assets/images/Disjuntores Schneider Electric MT/disjuntor evokit easypact schneider electric.png" alt="Disjuntor Evokit/Easypact Schneider Electric">
                         </div>
                         <div class="item-description">
                             <h3>Disjuntor Evokit/Easypact Schneider Electric</h3>
@@ -773,7 +869,7 @@
 
                     <div class="item">
                         <div class="item-image">
-                            <img src="assets/images/Disjuntores Schneider Electric MT/disjuntores schneider electric MT a gás 17.5`kv.png" alt="Disjuntores Schneider Electric MT a gás 17.5KV">
+                            <img loading="lazy" decoding="async" src="assets/images/Disjuntores Schneider Electric MT/disjuntores schneider electric MT a gás 17.5`kv.png" alt="Disjuntores Schneider Electric MT a gás 17.5KV">
                         </div>
                         <div class="item-description">
                             <h3>Disjuntores Schneider Electric MT à gás SF6 para tensões até 17.5kV - LF</h3>
@@ -799,7 +895,7 @@
 
                     <div class="item">
                         <div class="item-image">
-                            <img src="assets/images/Disjuntores Schneider Electric MT/disjuntores schneider electric MT a gás 40.5kv.png" alt="
+                            <img loading="lazy" decoding="async" src="assets/images/Disjuntores Schneider Electric MT/disjuntores schneider electric MT a gás 40.5kv.png" alt="
                             Disjuntores Schneider Electric MT à gás SF6 para tensões até 40.5kV - SF">
                         </div>
                         <div class="item-description">
@@ -829,7 +925,7 @@
 
                     <div class="item">
                         <div class="item-image">
-                            <img src="assets/images/Disjuntores Schneider Electric MT/disjuntor a gás sf6 schneider electric.png" alt="Disjuntor a gás SF6 Schneider Electric">
+                            <img loading="lazy" decoding="async" src="assets/images/Disjuntores Schneider Electric MT/disjuntor a gás sf6 schneider electric.png" alt="Disjuntor a gás SF6 Schneider Electric">
                         </div>
                         <div class="item-description">
                             <h3>Disjuntores MT à gás SF6 para tensões até 40,5 kV</h3>
@@ -867,7 +963,7 @@
 
                     <div class="item">
                         <div class="item-image">
-                            <img src="assets/images/Disjuntores Schneider Electric MT/disjuntor schneider electric VAA 17.5kv.png" alt="
+                            <img loading="lazy" decoding="async" src="assets/images/Disjuntores Schneider Electric MT/disjuntor schneider electric VAA 17.5kv.png" alt="
                             Disjuntor Schneider Electric - VAA 17,5 KV">
                         </div>
                         <div class="item-description">
@@ -884,7 +980,7 @@
 
                     <div class="item">
                         <div class="item-image">
-                            <img src="assets/images/Disjuntores Schneider Electric MT/disjuntor schneider electric HVX 17.5KV.png" alt="
+                            <img loading="lazy" decoding="async" src="assets/images/Disjuntores Schneider Electric MT/disjuntor schneider electric HVX 17.5KV.png" alt="
                             Disjuntor Schneider Electricr HVX 17,5 KV ON BOARD">
                         </div>
                         <div class="item-description">
@@ -901,7 +997,7 @@
 
                     <div class="item">
                         <div class="item-image">
-                            <img src="assets/images/Disjuntores Schneider Electric MT/disjuntor schneider electric HVX 17.5KV 2.png" alt="Disjuntor Schneider Electric HVX ON BOARD 17,5 KV">
+                            <img loading="lazy" decoding="async" src="assets/images/Disjuntores Schneider Electric MT/disjuntor schneider electric HVX 17.5KV 2.png" alt="Disjuntor Schneider Electric HVX ON BOARD 17,5 KV">
                         </div>
                         <div class="item-description">
                             <h3>Disjuntor Schneider Electric HVX ON BOARD 17,5 KV</h3>
@@ -917,7 +1013,7 @@
 
                     <div class="item">
                         <div class="item-image">
-                            <img src="assets/images/Disjuntores Schneider Electric MT/disjuntor schneider electric 17.5kv.png" alt="Disjuntor Schneider Electric ON BOARD 17,5 KV">
+                            <img loading="lazy" decoding="async" src="assets/images/Disjuntores Schneider Electric MT/disjuntor schneider electric 17.5kv.png" alt="Disjuntor Schneider Electric ON BOARD 17,5 KV">
                         </div>
                         <div class="item-description">
                             <h3>Disjuntor Schneider Electric ON BOARD 17,5 KV</h3>
@@ -933,7 +1029,7 @@
 
                     <div class="item">
                         <div class="item-image">
-                            <img src="assets/images/Disjuntores Schneider Electric MT/disjuntor schneider electric 25kv.png" alt="Disjuntor Schneider Electric ON BOARD 25 KV">
+                            <img loading="lazy" decoding="async" src="assets/images/Disjuntores Schneider Electric MT/disjuntor schneider electric 25kv.png" alt="Disjuntor Schneider Electric ON BOARD 25 KV">
                         </div>
                         <div class="item-description">
                             <h3>Disjuntor Schneider Electric ON BOARD 25 KV</h3>
@@ -949,7 +1045,7 @@
 
                     <div class="item">
                         <div class="item-image">
-                            <img src="assets/images/Disjuntores Schneider Electric MT/disjuntor schneider electric HVX 25.0kv.png" alt="Disjuntor Schneider Electric HVX 25,0 KV">
+                            <img loading="lazy" decoding="async" src="assets/images/Disjuntores Schneider Electric MT/disjuntor schneider electric HVX 25.0kv.png" alt="Disjuntor Schneider Electric HVX 25,0 KV">
                         </div>
                         <div class="item-description">
                             <h3>Disjuntor Schneider Electric HVX 25,0 KV</h3>
@@ -966,7 +1062,7 @@
 
                     <div class="item">
                         <div class="item-image">
-                            <img src="assets/images/Disjuntores Schneider Electric MT/disjuntor schneider electric HVX.png" alt="Disjuntor Schneider Electric HVX">
+                            <img loading="lazy" decoding="async" src="assets/images/Disjuntores Schneider Electric MT/disjuntor schneider electric HVX.png" alt="Disjuntor Schneider Electric HVX">
                         </div>
                         <div class="item-description">
                             <h3>Disjuntor Schneider Electric HVX</h3>
@@ -983,7 +1079,7 @@
 
                     <div class="item">
                         <div class="item-image">
-                            <img src="assets/images/Disjuntores Schneider Electric MT/disjuntor caixa moldada schneider electric.png" alt="
+                            <img loading="lazy" decoding="async" src="assets/images/Disjuntores Schneider Electric MT/disjuntor caixa moldada schneider electric.png" alt="
                             Disjuntor Caixa Moldada Schneider Electric">
                         </div>
                         <div class="item-description">
@@ -1009,7 +1105,7 @@
 
                     <div class="item">
                         <div class="item-image">
-                            <img src="assets/images/Disjuntores Schneider Electric MT/disjuntores compact NS caixa moldada.png" alt="
+                            <img loading="lazy" decoding="async" src="assets/images/Disjuntores Schneider Electric MT/disjuntores compact NS caixa moldada.png" alt="
                             Disjuntores Compact NS Caixa Moldada">
                         </div>
                         <div class="item-description">
@@ -1051,7 +1147,7 @@
 
                     <div class="item">
                         <div class="item-image">
-                            <img src="assets/images/Disjuntores Schneider Electric MT/disjuntor compact NSX caixa moldada schneider electric.png" alt="Disjuntor Compact NSX Caixa Moldada Schneider Electric">
+                            <img loading="lazy" decoding="async" src="assets/images/Disjuntores Schneider Electric MT/disjuntor compact NSX caixa moldada schneider electric.png" alt="Disjuntor Compact NSX Caixa Moldada Schneider Electric">
                         </div>
                         <div class="item-description">
                             <h3>Disjuntor Compact NSX Caixa Moldada Schneider Electric</h3>
@@ -1099,7 +1195,7 @@
 
                     <div class="item">
                         <div class="item-image">
-                            <img src="assets/images/Disjuntores Schneider Electric MT/disjuntor masterpact NT caixa aberta schneider electric.png" alt="Disjuntor Masterpact NT Caixa Aberta Schneider Electric">
+                            <img loading="lazy" decoding="async" src="assets/images/Disjuntores Schneider Electric MT/disjuntor masterpact NT caixa aberta schneider electric.png" alt="Disjuntor Masterpact NT Caixa Aberta Schneider Electric">
                         </div>
                         <div class="item-description">
                             <h3>Disjuntor Masterpact NT Caixa Aberta Schneider Electric</h3>
@@ -1153,7 +1249,7 @@
 
                     <div class="item">
                         <div class="item-image">
-                            <img src="assets/images/Disjuntores Schneider Electric MT/disjuntor masterpact NW de 800 a 6300A caixa aberta schneider electric.png" alt="Disjuntor Masterpact NW de 800 a 6.300A Caixa Aberta Schneider Electric">
+                            <img loading="lazy" decoding="async" src="assets/images/Disjuntores Schneider Electric MT/disjuntor masterpact NW de 800 a 6300A caixa aberta schneider electric.png" alt="Disjuntor Masterpact NW de 800 a 6.300A Caixa Aberta Schneider Electric">
                         </div>
                         <div class="item-description">
                             <h3>Disjuntor Masterpact NW de 800 a 6.300A Caixa Aberta Schneider Electric</h3>
@@ -1211,7 +1307,7 @@
                 <div class="product-desc hide" id="product-4">
                     <div class="item">
                         <div class="item-image">
-                            <img src="assets/images/Disjuntores de MT ABB/disjuntores caixa moldada aberta.png" alt="Disjuntores Caixa Moldada / Aberta">
+                            <img loading="lazy" decoding="async" src="assets/images/Disjuntores de MT ABB/disjuntores caixa moldada aberta.png" alt="Disjuntores Caixa Moldada / Aberta">
                         </div>
                         <div class="item-description">
                             <h3>Disjuntores Caixa Moldada / Aberta</h3>
@@ -1221,7 +1317,7 @@
 
                     <div class="item">
                         <div class="item-image">
-                            <img src="assets/images/Disjuntores de MT ABB/disjuntor isolado a gás hd4.png" alt="Disjuntor Isolado a Gás HD4">
+                            <img loading="lazy" decoding="async" src="assets/images/Disjuntores de MT ABB/disjuntor isolado a gás hd4.png" alt="Disjuntor Isolado a Gás HD4">
                         </div>
                         <div class="item-description">
                             <h3>Disjuntor Isolado a Gás HD4</h3>
@@ -1231,7 +1327,7 @@
 
                     <div class="item">
                         <div class="item-image">
-                            <img src="assets/images/Disjuntores de MT ABB/disjuntor isolado a gás hd4 R.png" alt="Disjuntor Isolado a Gás HD4/R">
+                            <img loading="lazy" decoding="async" src="assets/images/Disjuntores de MT ABB/disjuntor isolado a gás hd4 R.png" alt="Disjuntor Isolado a Gás HD4/R">
                         </div>
                         <div class="item-description">
                             <h3>Disjuntor Isolado a Gás HD4/R</h3>
@@ -1247,7 +1343,7 @@
                 <div class="product-desc hide" id="product-5">
                     <div class="item">
                         <div class="item-image">
-                            <img src="assets/images/Disjuntores de MT Beghim/disjuntor PL 15C onboard.png" alt="Disjuntor PL 15C Onboard">
+                            <img loading="lazy" decoding="async" src="assets/images/Disjuntores de MT Beghim/disjuntor PL 15C onboard.png" alt="Disjuntor PL 15C Onboard">
                         </div>
                         <div class="item-description">
                             <h3>Disjuntor PL 15C Onboard</h3>
@@ -1287,7 +1383,7 @@
 
                     <div class="item">
                         <div class="item-image">
-                            <img src="assets/images/Disjuntores de MT Beghim/disjuntor PL15C.png" alt="Disjuntor PL15C">
+                            <img loading="lazy" decoding="async" src="assets/images/Disjuntores de MT Beghim/disjuntor PL15C.png" alt="Disjuntor PL15C">
                         </div>
                         <div class="item-description">
                             <h3>Disjuntor PL15C</h3>
@@ -1300,7 +1396,7 @@
 
                     <div class="item">
                         <div class="item-image">
-                            <img src="assets/images/Disjuntores de MT Beghim/disjuntor PL 15 beghim.png" alt="Disjuntor PL15 Beghim">
+                            <img loading="lazy" decoding="async" src="assets/images/Disjuntores de MT Beghim/disjuntor PL 15 beghim.png" alt="Disjuntor PL15 Beghim">
                         </div>
                         <div class="item-description">
                             <h3>Disjuntor PL15 Beghim</h3>
@@ -1312,7 +1408,7 @@
 
                     <div class="item">
                         <div class="item-image">
-                            <img src="assets/images/Disjuntores de MT Beghim/disjuntor PVO beghim.png" alt="Disjuntor PVO Beghim">
+                            <img loading="lazy" decoding="async" src="assets/images/Disjuntores de MT Beghim/disjuntor PVO beghim.png" alt="Disjuntor PVO Beghim">
                         </div>
                         <div class="item-description">
                             <h3>Disjuntor PVO Beghim</h3>
@@ -1324,7 +1420,7 @@
 
                     <div class="item">
                         <div class="item-image">
-                            <img src="assets/images/Disjuntores de MT Beghim/disjuntor PVO 15 25 kv beghim.png" alt="Disjuntor PVO 15/25 KV Beghim">
+                            <img loading="lazy" decoding="async" src="assets/images/Disjuntores de MT Beghim/disjuntor PVO 15 25 kv beghim.png" alt="Disjuntor PVO 15/25 KV Beghim">
                         </div>
                         <div class="item-description">
                             <h3>Disjuntor PVO 15/25 KV Beghim</h3>
@@ -1336,7 +1432,7 @@
 
                     <div class="item">
                         <div class="item-image">
-                            <img src="assets/images/Disjuntores de MT Beghim/disjuntor LH.png" alt="Disjuntor LH 320 a 630A Beghim">
+                            <img loading="lazy" decoding="async" src="assets/images/Disjuntores de MT Beghim/disjuntor LH.png" alt="Disjuntor LH 320 a 630A Beghim">
                         </div>
                         <div class="item-description">
                             <h3>Disjuntor LH 320 a 630A Beghim</h3>
@@ -1345,7 +1441,7 @@
 
                     <div class="item">
                         <div class="item-image">
-                            <img src="assets/images/Disjuntores de MT Beghim/disjuntor LH2.png" alt="Disjuntor LH 1000 a 1600A Beghim">
+                            <img loading="lazy" decoding="async" src="assets/images/Disjuntores de MT Beghim/disjuntor LH2.png" alt="Disjuntor LH 1000 a 1600A Beghim">
                         </div>
                         <div class="item-description">
                             <h3>Disjuntor LH 1000 a 1600A Beghim</h3>
@@ -1354,7 +1450,7 @@
 
                     <div class="item">
                         <div class="item-image">
-                            <img src="assets/images/Disjuntores de MT Beghim/disjuntor DM Beghim.png" alt="Disjuntor DM Beghim">
+                            <img loading="lazy" decoding="async" src="assets/images/Disjuntores de MT Beghim/disjuntor DM Beghim.png" alt="Disjuntor DM Beghim">
                         </div>
                         <div class="item-description">
                             <h3>Disjuntor DM Beghim</h3>
@@ -1369,7 +1465,7 @@
                 <div class="product-desc hide" id="product-6">
                     <div class="item">
                         <div class="item-image">
-                            <img src="assets/images/Disjuntores de Alta Tensão Areva Alstom GE/disjuntor HYPACT 148kv 248kv alstom.png" alt="Disjuntor HYPACT 148KV / 248KV Alstom">
+                            <img loading="lazy" decoding="async" src="assets/images/Disjuntores de Alta Tensão Areva Alstom GE/disjuntor HYPACT 148kv 248kv alstom.png" alt="Disjuntor HYPACT 148KV / 248KV Alstom">
                         </div>
                         <div class="item-description">
                             <h3>Disjuntor HYPACT 148KV / 248KV Alstom</h3>
@@ -1379,7 +1475,7 @@
 
                     <div class="item">
                         <div class="item-image">
-                            <img src="assets/images/Disjuntores de Alta Tensão Areva Alstom GE/disjuntor linha GL 69kv 72.5 145kv 245kv 300kv alstom areva ge.png" alt="Disjuntor Linha GL, 69kv / 72,5 / 145kv / 245 kv, 300 kv - Alstom/Areva/GE">
+                            <img loading="lazy" decoding="async" src="assets/images/Disjuntores de Alta Tensão Areva Alstom GE/disjuntor linha GL 69kv 72.5 145kv 245kv 300kv alstom areva ge.png" alt="Disjuntor Linha GL, 69kv / 72,5 / 145kv / 245 kv, 300 kv - Alstom/Areva/GE">
                         </div>
                         <div class="item-description">
                             <h3>Disjuntor Linha GL, 69kv / 72,5 / 145kv / 245 kv, 300 kv - Alstom/Areva/GE</h3>
@@ -1398,7 +1494,7 @@
                 <div class="product-desc hide" id="product-7">
                     <div class="item">
                         <div class="item-image">
-                            <img src="assets/images/Disjuntores de Baixa Tensão Soprano/disjuntor na1-2000 aberto soprano.png" alt="Disjuntor NA1-2000 Aberto Soprano">
+                            <img loading="lazy" decoding="async" src="assets/images/Disjuntores de Baixa Tensão Soprano/disjuntor na1-2000 aberto soprano.png" alt="Disjuntor NA1-2000 Aberto Soprano">
                         </div>
                         <div class="item-description">
                             <h3>Disjuntor NA1-2000 Aberto Soprano</h3>
@@ -1424,7 +1520,7 @@
 
                     <div class="item">
                         <div class="item-image">
-                            <img src="assets/images/Disjuntores de Baixa Tensão Soprano/disjuntor na1 3200 aberto soprano.png" alt="Disjuntor NA1 3200 Aberto Soprano">
+                            <img loading="lazy" decoding="async" src="assets/images/Disjuntores de Baixa Tensão Soprano/disjuntor na1 3200 aberto soprano.png" alt="Disjuntor NA1 3200 Aberto Soprano">
                         </div>
                         <div class="item-description">
                             <h3>Disjuntor NA1 3200 Aberto Soprano</h3>
@@ -1450,7 +1546,7 @@
 
                     <div class="item">
                         <div class="item-image">
-                            <img src="assets/images/Disjuntores de Baixa Tensão Soprano/disjuntor aberto soprano 4000A.png" alt="Disjuntor Aberto Soprano 4000A">
+                            <img loading="lazy" decoding="async" src="assets/images/Disjuntores de Baixa Tensão Soprano/disjuntor aberto soprano 4000A.png" alt="Disjuntor Aberto Soprano 4000A">
                         </div>
                         <div class="item-description">
                             <h3>Disjuntor Aberto Soprano 4000A</h3>
@@ -1476,7 +1572,7 @@
 
                     <div class="item">
                         <div class="item-image">
-                            <img src="assets/images/Disjuntores de Baixa Tensão Soprano/disjuntor caixa moldada de 450 a 800A.png" alt="Disjuntor Caixa Moldada de 450 a 800A">
+                            <img loading="lazy" decoding="async" src="assets/images/Disjuntores de Baixa Tensão Soprano/disjuntor caixa moldada de 450 a 800A.png" alt="Disjuntor Caixa Moldada de 450 a 800A">
                         </div>
                         <div class="item-description">
                             <h3>Disjuntor Caixa Moldada de 450 a 800A</h3>
@@ -1501,7 +1597,7 @@
 
                     <div class="item">
                         <div class="item-image">
-                            <img src="assets/images/Disjuntores de Baixa Tensão Soprano/disjuntor soprano caixa moldada.png" alt="Disjuntor Soprano Caixa Moldada">
+                            <img loading="lazy" decoding="async" src="assets/images/Disjuntores de Baixa Tensão Soprano/disjuntor soprano caixa moldada.png" alt="Disjuntor Soprano Caixa Moldada">
                         </div>
                         <div class="item-description">
                             <h3>Disjuntor Soprano Caixa Moldada</h3>
@@ -1528,7 +1624,7 @@
                 <div class="product-desc hide" id="product-8">
                     <div class="item">
                         <div class="item-image">
-                            <img src="assets/images/TP e TC em Epoxi/transformadores de força a oleo- comtrafo.png" alt="Transformadores de Força a óleo – Comtrafo">
+                            <img loading="lazy" decoding="async" src="assets/images/TP e TC em Epoxi/transformadores de força a oleo- comtrafo.png" alt="Transformadores de Força a óleo – Comtrafo">
                         </div>
                         <div class="item-description">
                             <h3>Transformadores de Força a óleo – Comtrafo</h3>
@@ -1543,7 +1639,7 @@
 
                     <div class="item">
                         <div class="item-image">
-                            <img src="assets/images/TP e TC em Epoxi/transformador a seco contrafo.png" alt="Transformador a Seco Contrafo">
+                            <img loading="lazy" decoding="async" src="assets/images/TP e TC em Epoxi/transformador a seco contrafo.png" alt="Transformador a Seco Contrafo">
                         </div>
                         <div class="item-description">
                             <h3>Transformador a Seco Contrafo</h3>
@@ -1557,7 +1653,7 @@
 
                     <div class="item">
                         <div class="item-image">
-                            <img src="assets/images/TP e TC em Epoxi/TP e TC em epoxi.png" alt="TP's e TC's em Epoxi">
+                            <img loading="lazy" decoding="async" src="assets/images/TP e TC em Epoxi/TP e TC em epoxi.png" alt="TP's e TC's em Epoxi">
                         </div>
                         <div class="item-description">
                             <h3>TP's e TC's em Epoxi</h3>
@@ -1567,7 +1663,7 @@
 
                     <div class="item">
                         <div class="item-image">
-                            <img src="assets/images/TP e TC em Epoxi/TP a óleo.png" alt="TP a Óleo">
+                            <img loading="lazy" decoding="async" src="assets/images/TP e TC em Epoxi/TP a óleo.png" alt="TP a Óleo">
                         </div>
                         <div class="item-description">
                             <h3>TP a Óleo</h3>
@@ -1579,8 +1675,11 @@
         </section>
 
         <section class="services" id="services">
+            <div style="text-align:center" data-animation="up">
+                <span class="eyebrow">O que fazemos</span>
+            </div>
             <h2>Serviços</h2>
-            <div class="services-list" data-animation="right">
+            <div class="services-list">
                 <p>A HALPTEC, com toda sua excelência em prestação de serviços elétricos, presta reformas e manutenções nos seguintes equipamentos:
                     <ul>
                         <li>Disjuntores PVO</li>
@@ -1611,6 +1710,9 @@
         </section>
 
         <section class="contact" id="contact">
+            <div style="text-align:center" data-animation="up">
+                <span class="eyebrow">Fale conosco</span>
+            </div>
             <h2>Entre em contato!</h2>
             <div class="contact-box">
                 <div class="contact-form">
@@ -1661,10 +1763,19 @@
     </main>
 
     <footer>
-        <span>© 2023 - HALPTEC Serviços Elétricos | Desenvolvido por <a href="https://github.com/GabrielLima5">Gabriel Lima</a></span>
+        <span>© 2026 - HALPTEC Serviços Elétricos | Desenvolvido por <a href="https://github.com/GabrielLima5">Gabriel Lima</a></span>
     </footer>
 
-    <script src="assets/js/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+    <script src="assets/js/config.js" defer></script>
+    <script src="assets/js/preloader.js" defer></script>
+    <script src="assets/js/hero.js" defer></script>
+    <script src="assets/js/navigation.js" defer></script>
+    <script src="assets/js/scroll-effects.js" defer></script>
+    <script src="assets/js/accordion.js" defer></script>
+    <script src="assets/js/interactions.js" defer></script>
+    <script src="assets/js/parallax.js" defer></script>
     <script src="https://kit.fontawesome.com/e8fd0dd2d0.js" crossorigin="anonymous"></script>
 </body>
 </html>
